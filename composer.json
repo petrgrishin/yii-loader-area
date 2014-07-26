@@ -1,0 +1,31 @@
+{
+    "name": "petrgrishin/yii-loader-area",
+    "description": "Ajax loader area widget for Yii",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "yiisoft/yii": "*",
+        "petrgrishin/yii-widget": "~1.0",
+        "petrgrishin/yii-view": "dev-master"
+    },
+    "require-dev": {
+        "league/phpunit-coverage-listener": "~1.0"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/petrgrishin/yii-loader-area.git"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Petr Grishin",
+            "email": "petr.grishin@grishini.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PetrGrishin\\LoaderArea\\": "src/"
+        }
+    }
+}
