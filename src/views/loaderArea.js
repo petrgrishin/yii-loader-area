@@ -11,9 +11,9 @@ App.register('{{id}}', function(params, scope, widgets) {
     response.bindLoad(function() {
         $container.html(this.getContent());
     });
-    response.bindApply(function() {
+    response.bindContext(function() {
         var context = this.getContext();
-        context && context.bindApply && context.bindApply(function() {
+        context && context.onApply && context.onApply(function() {
             response.apply();
             load();
         });
