@@ -6,7 +6,7 @@
 use PetrGrishin\HtmlTag\HtmlTag;
 
 HtmlTag::create(HtmlTag::TAG_DIV)
-    ->attr('id', $containerId = 'getUniqueString_1')
+    ->attr('id', $containerId = $this->getUniqueIdentifier('container'))
     ->run();
 
 $this->setJsParams(array(
