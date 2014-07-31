@@ -2,6 +2,7 @@ App.register "{{id}}", (params, scope, widgets) ->
   $container = scope.$id params["containerId"]
   response = scope.createResponse()
   loader = scope.createLoader response
+
   load = ->
     loader.pull params["url"]
 
