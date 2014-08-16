@@ -14,16 +14,16 @@
     response.bindContext(function() {
       var context;
       context = this.getContext();
-      if (context && context.onApply) {
-        return context.onApply(function() {
-          response.apply();
+      if (context && context.bindApply) {
+        return context.bindApply(function() {
+          response.triggerApply();
           return load();
         });
       }
     });
     load();
     return {
-      onApply: function(callback) {
+      bindApply: function(callback) {
         return response.bindApply(callback);
       },
       reload: function() {

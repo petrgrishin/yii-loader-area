@@ -11,14 +11,14 @@ App.register "{{id}}", (params, scope, widgets) ->
 
   response.bindContext ->
     context = @getContext()
-    if context and context.onApply
-      context.onApply ->
-        response.apply()
+    if context and context.bindApply
+      context.bindApply ->
+        response.triggerApply()
         load()
 
   load()
 
-  onApply: (callback) ->
+  bindApply: (callback) ->
     response.bindApply callback
 
   reload: ->
